@@ -37,7 +37,12 @@ const PieChart = () => {
             text: {
                 fill: colors.grey[100]
             },
-           }, 
+           },
+           tooltip: {
+            container: {
+                color: colors.primary[500]
+            }
+        } 
         }}
         margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
         sortByValue={true}
@@ -57,7 +62,7 @@ const PieChart = () => {
             ]
         }}
         arcLinkLabelsSkipAngle={10}
-        arcLinkLabelsTextColor="#333333"
+        arcLinkLabelsTextColor= {colors.grey[100]}
         arcLinkLabelsThickness={2}
         arcLinkLabelsColor={{ from: 'color' }}
         enableArcLabels={false}
@@ -71,6 +76,9 @@ const PieChart = () => {
                 ]
             ]
         }}
+
+
+
         defs={[
             {
                 id: 'dots',
@@ -91,56 +99,7 @@ const PieChart = () => {
                 spacing: 10
             }
         ]}
-        fill={[
-            {
-                match: {
-                    id: 'ruby'
-                },
-                id: 'dots'
-            },
-            {
-                match: {
-                    id: 'c'
-                },
-                id: 'dots'
-            },
-            {
-                match: {
-                    id: 'go'
-                },
-                id: 'dots'
-            },
-            {
-                match: {
-                    id: 'python'
-                },
-                id: 'dots'
-            },
-            {
-                match: {
-                    id: 'scala'
-                },
-                id: 'lines'
-            },
-            {
-                match: {
-                    id: 'lisp'
-                },
-                id: 'lines'
-            },
-            {
-                match: {
-                    id: 'elixir'
-                },
-                id: 'lines'
-            },
-            {
-                match: {
-                    id: 'javascript'
-                },
-                id: 'lines'
-            }
-        ]}
+
         legends={[
             {
                 anchor: 'bottom',
