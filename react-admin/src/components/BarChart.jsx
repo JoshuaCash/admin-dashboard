@@ -9,7 +9,6 @@ const BarChart = () => {
     const colors = tokens(theme.palette.mode);
 
 
-    console.log(data)
 
     return (
         <ResponsiveBar
